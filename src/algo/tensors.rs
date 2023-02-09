@@ -6,7 +6,7 @@ pub trait TnesorForm {}
 pub struct Tensor {
     pub dim: i32,
     pub index: Option<String>,
-    pub values: Vec<Tensor>
+    pub values: Vec<Tensor>,
 }
 
 pub struct Tangent {
@@ -43,8 +43,7 @@ pub trait ContractIndex {
 impl std::ops::Add for OneForm {
     type Output = OneForm;
 
-    fn add(self, rhs: OneForm) ->  OneForm {
+    fn add(self, rhs: OneForm) -> OneForm {
         return self;
     }
-
 }

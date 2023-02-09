@@ -1,12 +1,11 @@
-use algo::tensors::{Tensor, OneForm};
-use algo::simexp::*;
 use algo::complexnumbers::*;
+use algo::symexp::*;
+use algo::tensors::{OneForm, Tensor};
 
 pub mod algo;
 
 fn main() {
     let a = Complex::new(0.0, 0.0);
-    let b: SimExp = SimExp::new("Hello");
+    let b: SymExp = SymExp::new("Hello");
     println!("{} and {}", a, b.wrap());
-    algo::simexp::evaluate(String::from("hello"));
 }
